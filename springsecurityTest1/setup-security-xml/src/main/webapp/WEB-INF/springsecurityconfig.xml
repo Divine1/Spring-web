@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security-4.2.xsd">
+
+
+	<!-- Actual code in documentation -->
+	<!-- Result is exception -->
+	<!-- <http auto-config="true" use-expressions="true">
+		<intercept-url pattern="/login" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/**" access="ROLE_USER" />
+		<form-login login-page="/login" />
+	</http> -->
+
+	<!-- Actual Code: modified 1 -->
+	<!-- The apache tomcat server started successfully but we get below warning message for /login context being considered for authentication-->
+	<!-- <http auto-config="true" use-expressions="true">
+		<intercept-url pattern="/login" access="hasRole('IS_AUTHENTICATED_ANONYMOUSLY')" />
+		<intercept-url pattern="/**" access="hasRole('ROLE_USER')" />
+		<form-login login-page="/login" />
+	</http> -->
+
+	<!-- Valid Code -->
+	<http auto-config="true" use-expressions="true">
+		<intercept-url pattern="/login" access="hasRole('ROLE_ANONYMOUS')" /> 
+		<intercept-url pattern="/**" access="hasRole('ROLE_USER')" />
+		<form-login login-page="/login" />
+	</http>
+
+
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="jimi" password="jimispassword" authorities="ROLE_USER, ROLE_ADMIN" />
+				<user name="bob" password="bobspassword" authorities="ROLE_USER" />
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>

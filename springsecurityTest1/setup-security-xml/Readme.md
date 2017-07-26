@@ -1,6 +1,6 @@
 # Few informations to note
 
-i have [raised a issue](https://github.com/spring-projects/spring-security/issues/4470) regarding a bug in sample code that is present in the [spring documentation](http://docs.spring.io/spring-security/site/docs/4.2.x/reference/htmlsingle/#ns-form-and-basic).
+i have [raised a issue](https://github.com/spring-projects/spring-security/issues/4470) regarding a bug in sample code that is used in [spring documentation](http://docs.spring.io/spring-security/site/docs/4.2.x/reference/htmlsingle/#ns-form-and-basic).
 
 i checked in this project to show the bug and the resolution for that issue.
 

@@ -13,5 +13,5 @@ This project is in ready-to-run state
 3. Apache maven 3.3.9
 4. Apache tomcat 8.0.45
 5. Spring MVC 4.3.4
-6. Spring Securit 4.2.3
+6. Spring Security 4.2.3
 7. Windows 8.1 64 bit

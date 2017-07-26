@@ -2,7 +2,8 @@
 
 i have [raised a issue](https://github.com/spring-projects/spring-security/issues/4470) regarding a bug in sample code that is present in the [spring documentation](http://docs.spring.io/spring-security/site/docs/4.2.x/reference/htmlsingle/#ns-form-and-basic).
 
-This project is a ready-to-run project, that i developed to show the bugs and resolutions for that issue.
+i checked in this project to show the bugs and resolutions for that issue.
+This project is in ready-to-run state
 
 ### Softwares used to build this project
 
